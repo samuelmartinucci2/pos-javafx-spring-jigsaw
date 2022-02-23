@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+             http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.6.xsd">
+    <security:global-method-security secured-annotations="enabled"/>
+    <bean id="userDetailsServiceImpl" class="com.samuel.service.impl.UserDetailsServiceImpl"/>
+    <security:authentication-manager>
+        <security:authentication-provider user-service-ref="userDetailsServiceImpl">
+            <security:password-encoder hash="bcrypt"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+</beans>

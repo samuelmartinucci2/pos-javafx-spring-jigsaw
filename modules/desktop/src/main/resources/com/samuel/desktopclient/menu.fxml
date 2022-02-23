@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="vbox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="com.samuel.desktopclient.MenuFormController">
+
+    <MenuBar id="menuBar" focusTraversable="true">
+        <menus>
+            <Menu text="Cadastros">
+                <items>
+                    <MenuItem fx:id="customersMenuItem" text="Clientes" onAction="#handleCustomerRegistrationMenu"/>
+                    <MenuItem fx:id="employeesMenuItem" text="Funcionarios" onAction="#handleEmployeeRegistrationMenu" />
+                    <MenuItem fx:id="productsMenuItem" text="Produtos" />
+                </items>
+            </Menu>
+            <Menu text="Caixa">
+                <items>
+                    <MenuItem fx:id="cashierMenuItem" text="Abrir"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</VBox>

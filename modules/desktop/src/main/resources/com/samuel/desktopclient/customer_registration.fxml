@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.samuel.desktopclient.CustomerRegistrationFormController">
+    <children>
+        <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <Label text="CPF">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Email">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Endereco">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="CEP">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="87.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+            <children>
+                <TextField fx:id="cpfField" />
+                <TextField fx:id="nameField" />
+                <TextField fx:id="emailField" />
+                <TextField fx:id="addressField" />
+                <TextField fx:id="postalCodeField" />
+            </children>
+        </VBox>
+        <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#saveButton" prefHeight="30.0" prefWidth="60.0" text="Save" />
+                <Button mnemonicParsing="false" onAction="#resetButton" prefHeight="30.0" prefWidth="60.0" text="Reset" />
+            </children>
+        </HBox>
+        <TableView fx:id="TableView" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="cpfColumn" prefWidth="35.0" text="CPF" />
+                <TableColumn fx:id="nameColumn" prefWidth="120.0" text="Nome" />
+                <TableColumn fx:id="emailColumn" prefWidth="120.0" text="Email" />
+                <TableColumn fx:id="addressColumn" prefWidth="60.0" text="Endereco" />
+                <TableColumn fx:id="postalCodeColumn" prefWidth="60.0" text="CEP" />
+                <TableColumn fx:id="editColumn" prefWidth="60.0" text="Editar" />
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Excluir" onAction="#deleteButton"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+    </children>
+</AnchorPane>
